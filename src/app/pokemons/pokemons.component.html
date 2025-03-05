@@ -1,1 +1,25 @@
-<p>pokemons works!</p>
+<p>Les six premiers Pokémons :</p>
+<p>Dans l'ordre du pokedex</p>
+<table>
+    @for (item of pokemons; track $index) {
+    <td>
+        <p>{{item.nom}}</p>
+        <ul>
+            <li>Catégorie : {{item.categorie}}</li>
+            <li>Type : {{item.type}}</li>
+
+            @if (item.taille == null) {
+            <li>N/A</li>
+            }@else {
+            <li>Taille :{{item.taille}} m</li>
+            }
+
+            @if (item.poids == null) {
+            <li>N/A</li>
+            }@else {
+            <li>Poids : {{item.poids}} kg</li>
+            }
+        </ul>
+    </td>
+    }
+</table>
