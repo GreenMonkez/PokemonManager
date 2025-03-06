@@ -1,0 +1,79 @@
+/* Style global du conteneur de la table */
+#table {
+    display: grid;
+    /* Utiliser un layout en grille */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* Créer des colonnes flexibles */
+    gap: 20px;
+    /* Espacement entre les éléments */
+    padding: 20px;
+    /* Espacement interne du conteneur */
+    background-color: #f4f4f4;
+    /* Fond doux */
+}
+
+/* Style pour chaque cellule */
+#cell {
+    background-color: #fff;
+    /* Fond blanc */
+    padding: 15px;
+    /* Espacement interne */
+    border-radius: 8px;
+    /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Ombre légère pour chaque carte */
+    text-align: center;
+    /* Centrer le texte et les éléments */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Animation au survol */
+}
+
+/* Effet au survol des cellules */
+#cell:hover {
+    transform: translateY(-5px);
+    /* Décalage léger vers le haut au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* Ombre plus marquée au survol */
+    cursor: pointer;
+    /* Changer le curseur */
+}
+
+/* Style pour l'image */
+#cell img {
+    width: 100%;
+    /* L'image prend toute la largeur de la cellule */
+    max-width: 150px;
+    /* Limiter la taille maximale */
+    height: auto;
+    /* Conserver les proportions de l'image */
+    margin-bottom: 15px;
+    /* Espacement sous l'image */
+}
+
+/* Style pour les titres (nom du pokémon) */
+#cell h4 {
+    font-size: 20px;
+    /* Taille du texte */
+    color: #333;
+    /* Couleur sombre pour le texte */
+    margin-bottom: 10px;
+    /* Espacement sous le titre */
+}
+
+/* Style pour les informations (taille et poids) */
+#cell p {
+    font-size: 14px;
+    /* Taille plus petite pour les infos */
+    color: #555;
+    /* Couleur gris clair pour les informations */
+    margin: 5px 0;
+    /* Espacement entre les lignes */
+}
+
+/* Style spécifique pour les informations N/A */
+#cell p:empty {
+    font-style: italic;
+    /* Italique pour les éléments vides */
+    color: #bbb;
+    /* Couleur gris clair pour indiquer l'absence de données */
+}

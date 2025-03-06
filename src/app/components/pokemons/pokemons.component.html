@@ -1,0 +1,21 @@
+<h2>{{pokemons.length}} pokémons en base de données :</h2>
+<div id="table">
+    @for (item of pokemons; track $index) {
+    <div id="cell">
+        <img [src]="item.image" alt="">
+        <h4>{{item.nom}}</h4>
+
+        @if (item.taille == null) {
+        <p>N/A</p>
+        }@else {
+        <p>Taille :{{item.taille}} m</p>
+        }
+
+        @if (item.poids == null) {
+        <p>N/A</p>
+        }@else {
+        <p>Poids : {{item.poids}} kg</p>
+        }
+    </div>
+    }
+</div>
